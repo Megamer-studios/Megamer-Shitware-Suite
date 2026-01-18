@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="MegamerShitwareSuite/ShitWord.csproj" />
+  <Project Path="ShittyExcel/ShittyExcel.csproj" Id="0da0d076-230b-4f74-b404-1c76e7fd5555" />
 </Solution>
