@@ -273,6 +273,16 @@ namespace ShittyExcel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pose {
+            get {
+                object obj = ResourceManager.GetObject("Pose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sound_Speech_and_Audio_Devices {
             get {
                 object obj = ResourceManager.GetObject("Sound_Speech_and_Audio_Devices", resourceCulture);

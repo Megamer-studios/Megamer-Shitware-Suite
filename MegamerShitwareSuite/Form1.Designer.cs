@@ -53,7 +53,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
@@ -114,7 +114,7 @@
             // 
             addTextToolStripMenuItem.Image = ShitWord.Properties.Resources.Manage_Your_Servers;
             addTextToolStripMenuItem.Name = "addTextToolStripMenuItem";
-            addTextToolStripMenuItem.Size = new Size(224, 26);
+            addTextToolStripMenuItem.Size = new Size(166, 26);
             addTextToolStripMenuItem.Text = "Add text";
             addTextToolStripMenuItem.Click += addTextToolStripMenuItem_Click;
             // 
@@ -122,7 +122,7 @@
             // 
             addImageToolStripMenuItem.Image = ShitWord.Properties.Resources.Monitor;
             addImageToolStripMenuItem.Name = "addImageToolStripMenuItem";
-            addImageToolStripMenuItem.Size = new Size(224, 26);
+            addImageToolStripMenuItem.Size = new Size(166, 26);
             addImageToolStripMenuItem.Text = "Add image";
             addImageToolStripMenuItem.Click += addImageToolStripMenuItem_Click;
             // 
@@ -164,7 +164,7 @@
             // 
             toolStripMenuItem2.Image = ShitWord.Properties.Resources.Monitor;
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(224, 26);
+            toolStripMenuItem2.Size = new Size(171, 26);
             toolStripMenuItem2.Text = "Foreground";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
@@ -172,7 +172,7 @@
             // 
             toolStripMenuItem3.Image = ShitWord.Properties.Resources.Manage_Your_Servers;
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(224, 26);
+            toolStripMenuItem3.Size = new Size(171, 26);
             toolStripMenuItem3.Text = "Background";
             toolStripMenuItem3.Click += toolStripMenuItem3_Click;
             // 
@@ -210,6 +210,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Shitty Word";
+            WindowState = FormWindowState.Maximized;
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             Resize += Form1_Resize;

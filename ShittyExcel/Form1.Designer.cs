@@ -37,8 +37,8 @@
             saveToolStripMenuItem = new ToolStripMenuItem();
             loadToolStripMenuItem = new ToolStripMenuItem();
             addToolStripMenuItem = new ToolStripMenuItem();
-            deleteToolStripMenuItem = new ToolStripMenuItem();
             collumnToolStripMenuItem = new ToolStripMenuItem();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
             removeCellsToolStripMenuItem = new ToolStripMenuItem();
             removeCollumnsToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -48,12 +48,13 @@
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.Cornsilk;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersHeight = 29;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Location = new Point(0, 28);
+            dataGridView1.Margin = new Padding(3, 50, 3, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(800, 450);
+            dataGridView1.Size = new Size(800, 422);
             dataGridView1.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -72,7 +73,6 @@
             menuStrip1.Size = new Size(800, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
-        
             // 
             // fileToolStripMenuItem
             // 
@@ -86,15 +86,17 @@
             // 
             saveToolStripMenuItem.Image = Properties.Resources.Folder_Open;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(224, 26);
+            saveToolStripMenuItem.Size = new Size(125, 26);
             saveToolStripMenuItem.Text = "Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Image = Properties.Resources.Folder_Closed;
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new Size(224, 26);
+            loadToolStripMenuItem.Size = new Size(125, 26);
             loadToolStripMenuItem.Text = "Load";
+            loadToolStripMenuItem.Click += loadToolStripMenuItem_Click;
             // 
             // addToolStripMenuItem
             // 
@@ -103,7 +105,14 @@
             addToolStripMenuItem.Name = "addToolStripMenuItem";
             addToolStripMenuItem.Size = new Size(71, 24);
             addToolStripMenuItem.Text = "Add";
-           
+            // 
+            // collumnToolStripMenuItem
+            // 
+            collumnToolStripMenuItem.Image = Properties.Resources.Earth;
+            collumnToolStripMenuItem.Name = "collumnToolStripMenuItem";
+            collumnToolStripMenuItem.Size = new Size(147, 26);
+            collumnToolStripMenuItem.Text = "Collumn";
+            collumnToolStripMenuItem.Click += collumnToolStripMenuItem_Click;
             // 
             // deleteToolStripMenuItem
             // 
@@ -113,19 +122,13 @@
             deleteToolStripMenuItem.Size = new Size(87, 24);
             deleteToolStripMenuItem.Text = "Delete";
             // 
-            // collumnToolStripMenuItem
-            // 
-            collumnToolStripMenuItem.Image = Properties.Resources.Earth;
-            collumnToolStripMenuItem.Name = "collumnToolStripMenuItem";
-            collumnToolStripMenuItem.Size = new Size(224, 26);
-            collumnToolStripMenuItem.Text = "Collumn";
-            // 
             // removeCellsToolStripMenuItem
             // 
             removeCellsToolStripMenuItem.Image = Properties.Resources.Manage_Your_Servers;
             removeCellsToolStripMenuItem.Name = "removeCellsToolStripMenuItem";
             removeCellsToolStripMenuItem.Size = new Size(209, 26);
             removeCellsToolStripMenuItem.Text = "Remove cells";
+            removeCellsToolStripMenuItem.Click += removeCellsToolStripMenuItem_Click;
             // 
             // removeCollumnsToolStripMenuItem
             // 
@@ -133,19 +136,23 @@
             removeCollumnsToolStripMenuItem.Name = "removeCollumnsToolStripMenuItem";
             removeCollumnsToolStripMenuItem.Size = new Size(209, 26);
             removeCollumnsToolStripMenuItem.Text = "Remove collumns";
+            removeCollumnsToolStripMenuItem.Click += removeCollumnsToolStripMenuItem_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(menuStrip1);
             Controls.Add(dataGridView1);
+            Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Shitty Excel";
+            WindowState = FormWindowState.Maximized;
             FormClosed += Form1_FormClosed;
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

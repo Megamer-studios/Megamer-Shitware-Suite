@@ -1,5 +1,4 @@
-﻿using MegamerShitwareSuite;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,34 +7,28 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ShitWord
+namespace ShittyExcel
 {
-    public partial class StartForm : Form
+    public partial class StartMenu : Form
     {
-
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        public StartForm()
+        public StartMenu()
         {
             InitializeComponent();
         }
 
-        private void StartForm_MouseDown(object sender, MouseEventArgs e)
+        private void StartMenu_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,8 +41,8 @@ namespace ShitWord
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Megamer Shit Word Files | *.msv";
-            ofd.Title = "Open MSV file";
+            ofd.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+            ofd.Title = "Open CSV file";
             ofd.FilterIndex = 0;
             ofd.Multiselect = false;
             ofd.CheckFileExists = true;
@@ -65,13 +58,13 @@ namespace ShitWord
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            AboutBox1 aboutBox1 = new AboutBox1();
+            aboutBox1.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AboutBox1 abx1 = new AboutBox1();
-            abx1.ShowDialog();
+            this.Close();
         }
     }
 }
