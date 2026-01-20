@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ShittyExcel
+namespace ShitPowerPoint
 {
-    public partial class StartMenu : Form
+    public partial class StartScreen : Form
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -17,12 +17,12 @@ namespace ShittyExcel
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        public StartMenu()
+        public StartScreen()
         {
             InitializeComponent();
         }
 
-        private void StartMenu_MouseDown(object sender, MouseEventArgs e)
+        private void StartScreen_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -33,43 +33,32 @@ namespace ShittyExcel
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form1 mainForm = new Form1("");
+            mainForm.Show();
             this.Hide();
-            Form1 form1 = new Form1("");
-            form1.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
-            ofd.Title = "Open CSV file";
-            ofd.FilterIndex = 0;
-            ofd.Multiselect = false;
-            ofd.CheckFileExists = true;
-            ofd.CheckPathExists = true;
+            ofd.Filter = "ShitPowerPoint Files|*.spp";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                Form1 mainForm = new Form1(ofd.FileName);
+                mainForm.Show();
                 this.Hide();
-                Form1 form1 = new Form1(ofd.FileName);
-                form1.ShowDialog();
-
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AboutBox1 aboutBox1 = new AboutBox1();
-            aboutBox1.ShowDialog();
+            AboutBox1 about = new AboutBox1();
+            about.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void StartMenu_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

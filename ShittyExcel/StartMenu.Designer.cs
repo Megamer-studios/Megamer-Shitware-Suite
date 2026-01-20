@@ -161,6 +161,7 @@
             Name = "StartMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StartMenu";
+            Load += StartMenu_Load;
             MouseDown += StartMenu_MouseDown;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

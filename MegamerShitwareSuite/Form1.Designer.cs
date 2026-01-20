@@ -66,6 +66,7 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.BackColor = Color.Tomato;
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripSplitButton1, toolStripDropDownButton1, toolStripButton2 });
             toolStrip1.Location = new Point(0, 0);
