@@ -24,7 +24,7 @@ An image-based presentation creator.
 - Navigate slides with arrow keys, spacebar, or mouse clicks
 - Presentations saved as `.spp` files using binary format
 
-### ShittyExcel
+### ShitExcel
 A CSV-based spreadsheet editor.
 
 **Features:**
@@ -43,7 +43,7 @@ A CSV-based spreadsheet editor.
 Clone the repository and build using the .NET CLI:
 
 ```bash
-git clone https://github.com/yourusername/MegamerShitwareSuite.git
+git clone https://github.com/Megamer-studios/Megamer-Shitware-Suite.git
 cd MegamerShitwareSuite
 dotnet build
 ```
@@ -102,13 +102,10 @@ MegamerShitwareSuite/
 - **Newtonsoft.Json** - JSON serialization (ShitWord)
 - **P/Invoke** - Windows API interop for custom window behavior
 
-## Screenshots
-
-*Coming soon*
 
 ## License
 
-This project is provided as-is for educational and entertainment purposes.
+This project is provided for free as-is for educational and entertainment purposes. 
 
 ## Contributing
 
