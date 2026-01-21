@@ -36,6 +36,7 @@ namespace MegamerShitwareSuite
                         var bytes = Convert.FromBase64String(cs.ImageBase64);
                         using var ms = new MemoryStream(bytes);
                         pb.Image = Image.FromStream(ms);
+                        pb.SizeMode = PictureBoxSizeMode.Zoom;
                     }
 
 
@@ -232,6 +233,7 @@ namespace MegamerShitwareSuite
                         var bytes = Convert.FromBase64String(cs.ImageBase64);
                         using var ms = new MemoryStream(bytes);
                         pb.Image = Image.FromStream(ms);
+                        pb.SizeMode = PictureBoxSizeMode.Zoom;
                     }
 
 
